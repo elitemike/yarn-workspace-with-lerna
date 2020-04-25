@@ -1,0 +1,39 @@
+{
+    "compilerOptions": {
+        "target": "es2017",
+        "module": "ESNext",
+        "moduleResolution": "node",
+        "lib": [
+            "dom",
+            "es6"
+        ],
+        "resolveJsonModule": true,
+        "removeComments": true,
+        "importHelpers": true,
+        "declaration": true,
+        "sourceMap": true,
+        "strict": true,
+        "strictFunctionTypes": true,
+        "noUnusedParameters": false,
+        "alwaysStrict": true,
+        "noUnusedLocals": false,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "allowJs": true,
+        "noImplicitAny": false,
+        "strictNullChecks": false,
+        "strictPropertyInitialization": false,
+        "noImplicitThis": false,
+        "baseUrl": ".",
+        "outDir": "dist",
+        "paths": {
+            "@control-set/*": [
+                "/src"
+            ]
+        }
+    }
+}

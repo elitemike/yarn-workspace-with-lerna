@@ -1,0 +1,53 @@
+{
+    "name": "@control-set/ui-temp",
+    "description": "An Aurelia plugin project.",
+    "version": "0.1.0",
+    "repository": {
+        "type": "???",
+        "url": "???"
+    },
+    "license": "UNLICENSED",
+    "scripts": {
+        "prebuild": "rimraf dist/*",
+        "clean": "rimraf dist/* coverage/*",
+        "build:tsc": "tsc -b tsconfig.build.json",
+        "build": "npm-run-all build:*",
+        "prebuild-watch": "npm run clean",
+        "build:static": "cpx src/**/*.{html,css,scss} dist",
+        "build-watch": "npm-run-all --parallel \"build:* -- --watch\"",
+        "build-control-set-ui": "npm-run-all build:*",
+        "pretest": "npm run clean",
+        "test:watch": "npm run test -- --watch",
+        "lint": "eslint src/**/*.ts",
+        "test": "au test"
+    },
+    "engines": {
+        "node": ">=8.9.0"
+    },
+    "main": "dist/index.js",
+    "module": "dist/native-modules/index.js",
+    "private": true,
+    "files": [
+        "dist",
+        "src"
+    ],
+    "dependencies": {
+        "@control-set/common-temp": "0.1.0",
+        "@control-set/factory-temp": "0.1.0",
+        "@fortawesome/fontawesome-svg-core": "^1.2.27",
+        "@fortawesome/free-brands-svg-icons": "^5.12.1",
+        "@fortawesome/free-regular-svg-icons": "^5.12.1",
+        "@fortawesome/free-solid-svg-icons": "^5.10.1",
+        "@fortawesome/pro-duotone-svg-icons": "^5.10.1",
+        "@fortawesome/pro-light-svg-icons": "^5.10.1",
+        "@fortawesome/pro-regular-svg-icons": "^5.10.1",
+        "@fortawesome/pro-solid-svg-icons": "^5.10.1",
+        "@syncfusion/ej2": "^18.1.42",
+        "@types/jquery": "^3.3.34",
+        "aurelia-syncfusion-ej2-bridge": "^0.1.0-alpha.0",
+        "bootstrap": "^4.4.1",
+        "jquery": "^3.4.1",
+        "popper.js": "^1.16.1",
+        "uuid": "^7.0.3"
+    }
+}

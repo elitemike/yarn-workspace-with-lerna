@@ -1,0 +1,43 @@
+{
+    "name": "@control-set/common-temp",
+    "description": "An Aurelia plugin project.",
+    "version": "0.1.0",
+    "repository": {
+        "type": "???",
+        "url": "???"
+    },
+    "license": "UNLICENSED",
+    "scripts": {
+        "prebuild": "rimraf dist/*",
+        "clean": "rimraf dist/* coverage/*",
+        "build:tsc": "tsc -b tsconfig.build.json",
+        "build": "npm-run-all build:*",
+        "prebuild-watch": "yarn clean",
+        "build-watch": "npm-run-all --parallel \"build:* -- --watch\"",
+        "build-control-set-common": "npm-run-all build:*",
+        "pretest": "yarn  clean",
+        "test:watch": "yarn test -- --watch",
+        "lint": "eslint src/**/*.ts",
+        "test": "jest",
+        "test-control-set-common": "yarn test"
+    },
+    "engines": {
+        "node": ">=8.9.0"
+    },
+    "main": "dist/index.js",
+    "private": true,
+    "files": [
+        "dist",
+        "src"
+    ],
+    "dependencies": {
+        "@syncfusion/ej2-inputs": "^17.4.47",
+        "aurelia-validation": "^1.6.0",
+        "uuid": "^7.0.3"
+    },
+    "devDependencies": {
+        "eslint-config-prettier": "^6.10.1",
+        "eslint-plugin-prettier": "^3.1.2",
+        "prettier": "^2.0.2"
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "name": "@control-set/factory-temp",
+    "description": "An Aurelia plugin project.",
+    "version": "0.1.0",
+    "repository": {
+        "type": "???",
+        "url": "???"
+    },
+    "license": "UNLICENSED",
+    "scripts": {
+        "prebuild": "rimraf dist/*",
+        "clean": "rimraf dist/* coverage/*",
+        "build:tsc": "tsc -b tsconfig.build.json",
+        "build": "npm-run-all build:*",
+        "prebuild-watch": "npm run clean",
+        "build-watch": "npm-run-all --parallel \"build:* -- --watch\"",
+        "build-control-set-factory": "npm-run-all build:*",
+        "pretest": "npm run clean",
+        "test:watch": "npm run test -- --watch",
+        "lint": "eslint src/**/*.ts",
+        "test": "au test"
+    },
+    "engines": {
+        "node": ">=8.9.0"
+    },
+    "main": "dist/index.js",
+    "private": true,
+    "files": [
+        "dist",
+        "src"
+    ],
+    "dependencies": {
+        "@control-set/common-temp": "0.1.0",
+        "aurelia-fetch-client": "^1.8.2",
+        "aurelia-validation": "^1.6.0",
+        "uuid": "^7.0.3"
+    }
+}
