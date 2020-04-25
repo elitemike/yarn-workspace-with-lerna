@@ -38,52 +38,10 @@
     "scripts": {
         "prebuild": "rimraf dist/*",
         "clean": "rimraf dist/* coverage/*",
-        "build:prod": "webpack --env.production --extractCss",
-        "start": "webpack-dev-server",
-        "build:dev": "webpack --extractCss",
-        "build-control-tester": "yarn build:prod",
-        "analyze": "webpack --env.production --analyze",
         "test": "au test",
         "watch": "cross-env TS_NODE_PROJECT=./build/tsconfig.json webpack-dev-server --config ./build/webpack.config.ts"
     },
     "engines": {
         "node": ">=8.9.0"
-    },
-    "jest": {
-        "moduleNameMapper": {
-            "^aurelia-binding$": "<rootDir>/node_modules/aurelia-binding"
-        },
-        "modulePaths": [
-            "<rootDir>/src",
-            "<rootDir>/node_modules"
-        ],
-        "moduleFileExtensions": [
-            "ts",
-            "js",
-            "json"
-        ],
-        "transform": {
-            "^.+\\.(css|less|sass|scss|styl|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "jest-transform-stub",
-            "^.+\\.ts$": "ts-jest"
-        },
-        "testRegex": "\\.spec\\.(ts|js)$",
-        "setupFiles": [
-            "<rootDir>/test/jest-pretest.ts"
-        ],
-        "testEnvironment": "node",
-        "collectCoverage": true,
-        "collectCoverageFrom": [
-            "src/**/*.{js,ts}",
-            "!**/*.spec.{js,ts}",
-            "!**/node_modules/**",
-            "!**/test/**"
-        ],
-        "coverageDirectory": "<rootDir>/test/coverage-jest",
-        "coverageReporters": [
-            "json",
-            "lcov",
-            "text",
-            "html"
-        ]
     }
 }

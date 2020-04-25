@@ -74,9 +74,9 @@
         "bootstrap": "yarn install && ./yarn-link.sh && lerna run build"
     },
     "dependencies": {
-        "@control-set/common": "file:packages\\control-set-common-temp",
-        "@control-set/factory": "file:packages\\control-set-factory-temp",
-        "@control-set/ui": "file:packages\\control-set-ui-temp",
+        "@control-set/common-temp": "file:packages\\control-set-common-temp",
+        "@control-set/factory-temp": "file:packages\\control-set-factory-temp",
+        "@control-set/ui-temp": "file:packages\\control-set-ui-temp",
         "control-tester": "file:applications\\control-tester"
     }
 }
