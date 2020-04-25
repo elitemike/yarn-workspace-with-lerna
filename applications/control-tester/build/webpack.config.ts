@@ -40,7 +40,7 @@ export = (): object => {
                 {
                     test: /\.css$/i,
                     issuer: [{ not: [{ test: /\.html$/i }] }],
-                    use: ['style-loader', 'css-loader']
+                    use: ['css-loader']
                 },
                 {
                     test: /\.css$/,
